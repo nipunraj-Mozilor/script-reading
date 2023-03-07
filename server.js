@@ -13,7 +13,7 @@ app.use(cookieParser())
 // Routes
 // app.use('/home', home)
 
-app.get('/', async (req, res) => {
+app.get('/home', async (req, res) => {
   // res.render(__dirname + './public')
   const filePath = path.join(__dirname, 'public', 'index.html')
   res.sendFile(filePath)
