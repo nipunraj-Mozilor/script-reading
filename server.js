@@ -3,7 +3,7 @@ const cookieParser = require('cookie-parser')
 const path = require('path') // require the 'path' module
 
 // const home = require('./routes/home')
-
+console.log('here')
 const app = express()
 
 // app.use(express.static(__dirname + '/public/index.html'))
