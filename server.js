@@ -1,6 +1,6 @@
 const express = require('express')
 const cookieParser = require('cookie-parser')
-const path = require('path') // require the 'path' module
+const path = require('path')
 
 // const home = require('./routes/home')
 console.log('here')
@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 // Routes
 // app.use('/home', home)
 
-app.get('/', async (req, res) => {
+app.get('/home', async (req, res) => {
   // res.render(__dirname + './public')
   // const filePath = path.join(__dirname, 'public', 'index.html')
   // res.sendFile(filePath)
@@ -29,6 +29,8 @@ function filterBoolean(str) {
   return str === 'true'
 }
 
-// connection
-const port = process.env.PORT || 8000
-app.listen(port, () => console.log(`Listening to port ${port}`))
+// // connection
+// const port = process.env.PORT || 8000
+// app.listen(port, () => console.log(`Listening to port ${port}`))
+
+module.exports = app
