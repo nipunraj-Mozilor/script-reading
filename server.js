@@ -10,13 +10,17 @@ const app = express()
 app.use(express.json())
 app.use(cookieParser())
 
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')))
+
 // Routes
 // app.use('/home', home)
 
 app.get('/home', async (req, res) => {
   // res.render(__dirname + './public')
-  const filePath = path.join(__dirname, 'public', 'index.html')
-  res.sendFile(filePath)
+  // const filePath = path.join(__dirname, 'public', 'index.html')
+  // res.sendFile(filePath)
+  res.sendFile(path.join(__dirname, 'public', 'index.html'))
   if (req.cookies['cookieyes-consent']) {
     const set = 'set'
     const str = req.cookies['cookieyes-consent']
