@@ -21,6 +21,7 @@ app.get('/', async (req, res) => {
   // const filePath = path.join(__dirname, 'public', 'index.html')
   // res.sendFile(filePath)
   // res.sendFile(path.join(__dirname, 'public', 'index.html'))
+  console.log('Endpoint "/" was called.')
   res.send('hello world')
 })
 
